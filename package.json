@@ -1,6 +1,6 @@
 {
   "name": "@hibanka/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared ESLint config",
   "repository": "https://github.com/Hibanka/eslint-config",
   "main": ".eslintrc.json",
@@ -9,12 +9,13 @@
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
-    "eslint": "^8.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^40.0.0"
   },
   "engines": {
     "node": ">=16"

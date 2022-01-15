@@ -4,11 +4,11 @@
     "node": true
   },
   "extends": [
-    "google",
     "eslint:recommended",
+    "google",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,10 +17,45 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "unicorn"
   ],
   "rules": {
     "prettier/prettier": "warn",
+    "unicorn/better-regex": "warn",
+    "unicorn/catch-error-name": [
+      "warn",
+      {
+        "name": "e"
+      }
+    ],
+    "unicorn/escape-case": "warn",
+    "unicorn/new-for-builtins": "warn",
+    "unicorn/no-console-spaces": "warn",
+    "unicorn/no-instanceof-array": "warn",
+    "unicorn/no-new-array": "warn",
+    "unicorn/no-new-buffer": "warn",
+    "unicorn/no-unreadable-array-destructuring": "warn",
+    "unicorn/no-useless-fallback-in-spread": "warn",
+    "unicorn/no-useless-spread": "warn",
+    "unicorn/no-useless-undefined": "warn",
+    "unicorn/no-zero-fractions": "warn",
+    "unicorn/number-literal-case": "warn",
+    "unicorn/numeric-separators-style": "warn",
+    "unicorn/prefer-array-find": "warn",
+    "unicorn/prefer-array-flat": "warn",
+    "unicorn/prefer-array-flat-map": "warn",
+    "unicorn/prefer-array-some": "warn",
+    "unicorn/prefer-date-now": "warn",
+    "unicorn/prefer-default-parameters": "warn",
+    "unicorn/prefer-includes": "warn",
+    "unicorn/prefer-math-trunc": "warn",
+    "unicorn/prefer-node-protocol": "warn",
+    "unicorn/prefer-number-properties": "warn",
+    "unicorn/prefer-spread": "warn",
+    "unicorn/prefer-string-slice": "warn",
+    "unicorn/require-number-to-fixed-digits-argument": "warn",
+    "unicorn/throw-new-error": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-interface": "off",
@@ -47,6 +82,15 @@
         "exceptAfterSingleLine": true
       }
     ],
+    "padding-line-between-statements": [
+      "warn",
+      {
+        "blankLine": "always",
+        "prev": "import",
+        "next": "export"
+      }
+    ],
+    "guard-for-in": "off",
     "no-empty": "off",
     "require-jsdoc": "off",
     "max-len": "off",
