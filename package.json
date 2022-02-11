@@ -1,13 +1,10 @@
 {
   "name": "@hibanka/eslint-config",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "Shared ESLint config",
   "repository": "https://github.com/Hibanka/eslint-config",
   "main": ".eslintrc.json",
   "files": [".eslintrc.json"],
-  "scripts": {
-    "publish": "npm publish --access public"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
