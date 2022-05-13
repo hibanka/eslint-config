@@ -4,8 +4,6 @@ Shared **ESLint config**.
 
 ## Installation
 
-Install via npm:
-
 ```sh
 npm install --save-dev eslint @hibanka/eslint-config
 ```

@@ -1,27 +1,18 @@
 {
   "env": {
-    "es6": true,
+    "es2022": true,
     "node": true
   },
-  "extends": [
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "unicorn"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "unicorn"],
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.ts", "*.tsx"],
       "rules": {
         "constructor-super": "off", // ts(2335) & ts(2377)
         "getter-return": "off", // ts(2378)
@@ -110,6 +101,7 @@
     "guard-for-in": "off",
     "max-len": "off",
     "new-cap": "off",
+    "valid-jsdoc": "off",
     "lines-between-class-members": [
       "warn",
       "always",
@@ -128,13 +120,12 @@
     "unicorn/consistent-destructuring": "off",
     "unicorn/consistent-function-scoping": "off",
     "unicorn/custom-error-definition": "off",
-    "unicorn/empty-brace-spaces": "error",
+    "unicorn/empty-brace-spaces": "off",
     "unicorn/error-message": "off",
     "unicorn/escape-case": "error",
     "unicorn/expiring-todo-comments": "off",
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": "off",
-    "unicorn/import-index": "off",
     "unicorn/import-style": "error",
     "unicorn/new-for-builtins": "error",
     "unicorn/no-abusive-eslint-disable": "off",
@@ -147,7 +138,7 @@
     "unicorn/no-console-spaces": "error",
     "unicorn/no-document-cookie": "error",
     "unicorn/no-empty-file": "off",
-    "unicorn/no-for-loop": "error",
+    "unicorn/no-for-loop": "off",
     "unicorn/no-hex-escape": "error",
     "unicorn/no-instanceof-array": "error",
     "unicorn/no-invalid-remove-event-listener": "error",
@@ -164,13 +155,15 @@
     "unicorn/no-thenable": "error",
     "unicorn/no-this-assignment": "error",
     "unicorn/no-unreadable-array-destructuring": "off",
+    "unicorn/no-unreadable-iife": "off",
     "unicorn/no-unsafe-regex": "off",
     "unicorn/no-unused-properties": "off",
     "unicorn/no-useless-fallback-in-spread": "error",
     "unicorn/no-useless-length-check": "error",
     "unicorn/no-useless-promise-resolve-reject": "error",
     "unicorn/no-useless-spread": "error",
-    "unicorn/no-useless-undefined": "error",
+    "unicorn/no-useless-switch-case": "off",
+    "unicorn/no-useless-undefined": "off",
     "unicorn/no-zero-fractions": "error",
     "unicorn/number-literal-case": "error",
     "unicorn/numeric-separators-style": "error",
@@ -180,7 +173,7 @@
     "unicorn/prefer-array-flat-map": "error",
     "unicorn/prefer-array-index-of": "error",
     "unicorn/prefer-array-some": "error",
-    "unicorn/prefer-at": "off",
+    "unicorn/prefer-at": "error",
     "unicorn/prefer-code-point": "error",
     "unicorn/prefer-date-now": "error",
     "unicorn/prefer-default-parameters": "error",
@@ -190,11 +183,13 @@
     "unicorn/prefer-dom-node-text-content": "error",
     "unicorn/prefer-export-from": "error",
     "unicorn/prefer-includes": "error",
-    "unicorn/prefer-json-parse-buffer": "error",
+    "unicorn/prefer-json-parse-buffer": "off",
     "unicorn/prefer-keyboard-event-key": "error",
     "unicorn/prefer-math-trunc": "error",
     "unicorn/prefer-modern-dom-apis": "error",
+    "unicorn/prefer-modern-math-apis": "error",
     "unicorn/prefer-module": "off",
+    "unicorn/prefer-native-coercion-functions": "off",
     "unicorn/prefer-negative-index": "off",
     "unicorn/prefer-node-protocol": "error",
     "unicorn/prefer-number-properties": "error",
@@ -224,17 +219,24 @@
     "unicorn/text-encoding-identifier-case": "error",
     "unicorn/throw-new-error": "error",
     "@typescript-eslint/adjacent-overload-signatures": "error",
-    "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/ban-types": "error",
-    "@typescript-eslint/explicit-module-boundary-types": [
+    "@typescript-eslint/array-type": [
       "warn",
       {
-        "allowArgumentsExplicitlyTypedAsAny": true,
-        "allowDirectConstAssertionInArrowFunctions": true,
-        "allowedNames": [],
+        "default": "array-simple"
+      }
+    ],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-types": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true,
         "allowHigherOrderFunctions": true,
-        "allowTypedFunctionExpressions": true
+        "allowDirectConstAssertionInArrowFunctions": true,
+        "allowConciseArrowFunctionExpressionsStartingWithVoid": false,
+        "allowedNames": []
       }
     ],
     "@typescript-eslint/explicit-member-accessibility": [
