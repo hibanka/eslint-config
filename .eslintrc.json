@@ -102,6 +102,15 @@
     "max-len": "off",
     "new-cap": "off",
     "valid-jsdoc": "off",
+    "no-implicit-coercion": [
+      "error",
+      {
+        "boolean": false,
+        "number": true,
+        "string": false,
+        "disallowTemplateShorthand": false
+      }
+    ],
     "lines-between-class-members": [
       "warn",
       "always",
