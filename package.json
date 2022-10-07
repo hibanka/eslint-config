@@ -1,19 +1,19 @@
 {
   "name": "@hibanka/eslint-config",
-  "version": "3.4.0",
-  "description": "Shared ESLint config",
+  "version": "3.5.0",
+  "description": "Node.js shared config for ESLint",
   "repository": "https://github.com/Hibanka/eslint-config",
   "main": ".eslintrc.json",
   "files": [
     ".eslintrc.json"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.32.0",
-    "@typescript-eslint/parser": "^5.32.0",
-    "eslint": "^8.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-unicorn": "^43.0.2"
+    "eslint-plugin-unicorn": "^44.0.2"
   },
   "engines": {
     "node": ">=16"
